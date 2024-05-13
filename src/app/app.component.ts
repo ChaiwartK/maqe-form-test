@@ -44,6 +44,8 @@ export class AppComponent {
   constructor() {
     this.posts.forEach((post: any) => {
       post.author = this.authors.find((author: any) => author.id === post.author_id);
+
+      console.log(post)
     });
   }
 }
