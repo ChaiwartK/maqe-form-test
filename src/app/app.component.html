@@ -1,0 +1,26 @@
+<div class="container">
+  <br>
+  <h1 class="fw-bolder">MAQE Forum</h1>
+  <h5>your current imeZone is:Asia/Bangkok</h5>
+  <br>
+
+  <div class="card mb-3" *ngFor="let post of posts">
+    <div class="card-header">
+      <img src="{{ post.author.avatar_url }}" width="40" height="40" class="rounded-circle me-2" alt="">
+      <span class="text-name me-2">{{ post.author.name }}</span>
+      <span class="text-secondary">{{ post.created_at }}</span>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3">
+          <img src="{{ post.image_url }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-9">
+          <h4>{{ post.title }}</h4>
+          {{ post.body }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
